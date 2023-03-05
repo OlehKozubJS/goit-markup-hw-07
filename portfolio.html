@@ -11,7 +11,7 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <header class="header-section">
+    <header class="header-section">  
         <div class="container">
             <nav class="navigation">
                 <a class="logo header-logo" href="./index.html" target="_self"><span class="logo-left">Web</span><span class="logo-right-header">Studio</span></a>               
@@ -29,7 +29,7 @@
                     </li>
                 </ul>
             </nav>
-            
+                
             <address class="contacts">
                 <ul class="contact-links">
                     <li>
@@ -40,35 +40,85 @@
                         <a class="contact-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
                     </li>
                 </ul>
-            </address>
-        </div>
+            </address>          
+        </div>       
+    </header>
+
+    <header class="header-section-tablet">  
+        <div class="container">
+            <a class="logo header-logo" href="./index.html" target="_self"><span class="logo-left">Web</span><span class="logo-right-header">Studio</span></a> 
+
+            <nav class="navigation">              
+                <ul class="navigation-links">
+                    <li>
+                        <a class="navigation-link" href="./index.html" target="_self">Studio</a>
+                    </li>
+
+                    <li>
+                        <a class="navigation-link current-page" href="./portfolio.html" target="_self">Portfolio</a>
+                    </li>
+
+                    <li>
+                        <a class="navigation-link" href="">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+                
+            <address class="contacts">
+                <ul class="contact-links">
+                    <li>
+                        <a class="contact-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+
+                    <li>
+                        <a class="contact-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+                    </li>
+                </ul>
+            </address>          
+        </div>       
+    </header>
+
+    <header class="header-section-phone">  
+        <div class="container">
+            <a class="logo header-logo" href="./index.html" target="_self"><span class="logo-left">Web</span><span class="logo-right-header">Studio</span></a> 
+            
+            <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="menu-toggle-icon">
+                    <use href="./images/icons.svg#menu-icon"></use>
+                </svg>
+            </button>             
     </header>
 
     <main>
         <section class="product-section">
             <div class="container">
                 <h1 class="product-headline visually-hidden">Our Products</h1>
-                <ul class="filter-buttons">
-                    <li>
-                        <button class="filter-button" type="button" onclick="cardFilter('allFilter')">All</button>
-                    </li>
+                <form class="filter-buttons">
+                    <label for="all">
+                        <input class="filter-button-radio" type="radio" name="filter-button" id="all" oninput="cardFilter('allFilter')" checked>
+                        <div class="filter-button">All</div>
+                    </label>
 
-                    <li>
-                        <button class="filter-button" type="button" onclick="cardFilter('websiteFilter')">Web Site</button>
-                    </li>
+                    <label for="website">
+                        <input class="filter-button-radio" type="radio" name="filter-button" id="website" oninput="cardFilter('websiteFilter')">
+                        <div class="filter-button">Web Site</div>
+                    </label for="">
 
-                    <li>
-                        <button class="filter-button" type="button" onclick="cardFilter('appFilter')">App</button>
-                    </li>
+                    <label for="app">
+                        <input class="filter-button-radio" type="radio" name="filter-button" id="app" oninput="cardFilter('appFilter')">
+                        <div class="filter-button">App</div>
+                    </label>
 
-                    <li>
-                        <button class="filter-button" type="button" onclick="cardFilter('designFilter')">Design</button>
-                    </li>
+                    <label for="design">
+                        <input class="filter-button-radio" type="radio" name="filter-button" id="design" oninput="cardFilter('designFilter')">
+                        <div class="filter-button">Design</div>
+                    </label>
 
-                    <li>
-                        <button class="filter-button" type="button" onclick="cardFilter('marketingFilter')">Marketing</button>
-                    </li>
-                </ul>
+                    <label for="marketing">
+                        <input class="filter-button-radio" type="radio" name="filter-button" id="marketing" oninput="cardFilter('marketingFilter')">
+                        <div class="filter-button">Marketing</div>
+                    </label>
+                </form>
 
                 <ul class="product-cards">
                     <li class="product-card">
@@ -300,9 +350,87 @@
                     </svg>
                 </button>
             </form>
+        </div>
     </footer>
 
+    <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="js-close-menu" data-modal-close>
+            <svg class="menu-close-icon">
+                <use href="./images/icons.svg#modal-window-close-icon"></use>
+            </svg>
+        </button>  
+
+        <nav class="menu-navigation">              
+            <ul class="menu-navigation-links">
+                <li>
+                    <a class="menu-navigation-link" href="./index.html" target="_self">Studio</a>
+                </li>
+
+                <li>
+                    <a class="menu-navigation-link menu-current-page" href="./portfolio.html" target="_self">Portfolio</a>
+                </li>
+
+                <li>
+                    <a class="menu-navigation-link" href="">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+            
+        <address class="menu-contacts">
+            <ul class="menu-contact-links">
+                <li>
+                    <a class="menu-contact-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </li>
+
+                <li>
+                    <a class="menu-contact-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+                </li>
+            </ul>
+        </address> 
+
+        <ul class="menu-social-media-cards">
+            <li class="menu-social-media-card">
+                <a class="menu-social-media-link" href="">
+                    <div class="menu-social-media-link-content">
+                        <svg class="menu-social-media-logo">
+                            <use href="./images/icons.svg#instagram-icon"></use>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+
+            <li class="menu-social-media-card">
+                <a class="menu-social-media-link" href="">
+                    <div class="menu-social-media-link-content">
+                        <svg class="menu-social-media-logo">
+                            <use href="./images/icons.svg#twitter-icon"></use>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+
+            <li class="-social-media-card">
+                <a class="menu-social-media-link" href="">
+                    <div class="menu-social-media-link-content">
+                        <svg class="menu-social-media-logo">
+                            <use href="./images/icons.svg#facebook-icon"></use>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="menu-social-media-card">
+                <a class="menu-social-media-link" href="">
+                    <div class="menu-social-media-link-content">
+                        <svg class="menu-social-media-logo">
+                            <use href="./images/icons.svg#linkedin-icon"></use>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
     <script src="./js/mobile-menu.js"></script>
-    <script src="./js/product-cards-select.js"></script>
 </body>
 </html>

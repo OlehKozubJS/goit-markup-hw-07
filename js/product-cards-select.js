@@ -19,7 +19,7 @@ let productCardWidth = [360, 360, 360, 360, 360, 360, 360, 360, 360];
 
 let cardData = productCardClasses["allFilter"];
 
-setInterval(cardAppearsAndDisappears, 10);
+setInterval(cardAppearsAndDisappears, 1);
 
 function cardFilter(cardType) {
     cardData = productCardClasses[cardType];
