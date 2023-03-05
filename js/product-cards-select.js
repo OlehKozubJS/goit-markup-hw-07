@@ -10,11 +10,11 @@ let productCardWidth = [100, 100, 100, 100, 100, 100, 100, 100, 100];
 
 let cardData = "allFilter";
 
-setInterval(cardAppearsAndDisappears, 1);
-
 function cardFilter(cardType) {
     cardData = cardType;
 }
+
+setInterval(cardAppearsAndDisappears, 1);
 
 function cardAppearsAndDisappears() {
     for (let itemIndex = 0; itemIndex < productCards.length; ++itemIndex) {
