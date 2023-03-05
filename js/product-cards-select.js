@@ -4,22 +4,33 @@ let productText = document.getElementsByClassName("product-description");
 
 let productCards = document.getElementsByClassName("product-card");
 
-let productCardClasses = ["appFilter", "marketingFilter", "appFilter", "marketingFilter", "designFilter", "marketingFilter", "designFilter", "websiteFilter", "websiteFilter"];
+let productCardClasses =
+{
+"allFilter":       [true, true, true, true, true, true, true, true, true],
+
+"appFilter":       [true, false, true, false, false, false, false, false, false],
+
+"marketingFilter": [false, true, false, true, false, true, false, false, false],
+
+"designFilter":    [false, false, false, false, true, false, true, false, false],
+
+"websiteFilter":   [false, false, false, false, false, false, false, true, true]
+}
 
 let productCardWidth = [100, 100, 100, 100, 100, 100, 100, 100, 100];
 
-let cardData = "allFilter";
+let cardData = productCardClasses["allFilter"];
 
 setInterval(cardAppearsAndDisappears, 1);
 
 function cardFilter(cardType) {
-    cardData = cardType;
+    cardData = productCardClasses[cardType];
 }
 
 function cardAppearsAndDisappears() {
     for (let itemIndex = 0; itemIndex < productCards.length; ++itemIndex) {
-        if ((productCardClasses[itemIndex] == cardData || cardData == "allFilter") && productCardWidth[itemIndex] < 100) ++productCardWidth[itemIndex];
-        if (productCardClasses[itemIndex] != cardData && cardData != "allFilter" && productCardWidth[itemIndex] > 0) --productCardWidth[itemIndex];
+        if (cardData[itemIndex] == true  && productCardWidth[itemIndex] < 100) ++productCardWidth[itemIndex];
+        if (cardData[itemIndex] == false && productCardWidth[itemIndex] >   0) --productCardWidth[itemIndex];
 
         productLinks[itemIndex].style = `width: ${productCardWidth[itemIndex]}%; overflow: hidden;`;
         productImages[itemIndex].style = `width: ${productCardWidth[itemIndex]}%; overflow: hidden;`;        
