@@ -915,6 +915,7 @@ label {
     }
 
     .product-cards {
+        column-gap: 0;
         justify-content: space-between;
     }
 
@@ -996,8 +997,10 @@ label {
     .product-cards {
         row-gap: 48px;
     }
-    
-    .product-image {
+
+    .product-link-content,
+    .product-image,
+    .product-description {
         width: 396px;
     }
 
