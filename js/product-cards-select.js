@@ -1,8 +1,8 @@
-let productLinks = document.getElementsByClassName("product-link-content");
-let productImages = document.getElementsByClassName("product-image");
-let productText = document.getElementsByClassName("product-description");
+let productLinks = document.querySelectorAll(".product-link-content");
+let productImages = document.querySelectorAll(".product-image");
+let productText = document.querySelectorAll(".product-description");
 
-let productCards = document.getElementsByClassName("product-card");
+let productCards = document.querySelectorAll(".product-card");
 
 let productCardClasses = ["appFilter", "marketingFilter", "appFilter", "marketingFilter", "designFilter", "marketingFilter", "designFilter", "websiteFilter", "websiteFilter"];
 
